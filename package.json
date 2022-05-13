@@ -6,5 +6,8 @@
   "repository": "https://github.com/Thyssenkrupp234/Roblox-Cursor-Restore",
   "author": "Lincoln Muller",
   "license": "MIT",
-  "bin": "./main.js"
+  "bin": "./main.js",
+  "scripts": {
+    "compile": "yarn && tsc && pkg . && rm -r -f roblox_postupdate_oldcursor-win.exe && rm -r -f roblox_postupdate_oldcursor-linux"
+  }
 }
