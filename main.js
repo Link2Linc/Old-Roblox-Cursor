@@ -45,8 +45,44 @@ function oldCursorMacOS() {
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
 }
+function revertDefaultCursorMacOS() {
+    console.log("Reverting to default cursor");
+    var backupDirectory = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/';
+    var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
+    var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/ArrowCursor.png';
+    if (!fs_1.default.existsSync(backupDirectory)) {
+        fs_1.default.mkdirSync(backupDirectory);
+    }
+    fs_1.default.rename(oldPath, newPath, function (err) {
+        if (err)
+            throw err;
+        console.log('Moved ' + oldPath + ' to ' + newPath);
+    });
+    var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
+    var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/ArrowFarCursor.png';
+    fs_1.default.rename(oldPath, newPath, function (err) {
+        if (err)
+            throw err;
+        console.log('Moved ' + oldPath + ' to ' + newPath);
+    });
+    var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
+    var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
+    fs_1.default.rename(oldPath, newPath, function (err) {
+        if (err)
+            throw err;
+        console.log('Moved ' + oldPath + ' to ' + newPath);
+    });
+    var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
+    var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
+    fs_1.default.rename(oldPath, newPath, function (err) {
+        if (err)
+            throw err;
+        console.log('Moved ' + oldPath + ' to ' + newPath);
+    });
+}
 if (process.argv[2] && process.platform === 'darwin' && process.argv[2] === '--revert') {
     console.log('Reverting to default cursor');
+    revertDefaultCursorMacOS();
 }
 else {
     console.log('No arguments passed, defaulting to new cursor');
