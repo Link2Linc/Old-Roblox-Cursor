@@ -1,3 +1,5 @@
 node_modules/
 roblox_postupdate_oldcursor-macos
 roblox_postupdate_oldcursor-win.exe
+yarn.lock
+yarn-error.log*
