@@ -31,6 +31,5 @@ And much more!
 
 | To be added     | Description |
 | ----------- | ----------- |
-| Windows Support      | Will be fixed by fetching latest ROBLOX version, checking if that version exists on your PC and if not, prompts you to install it       |
-Will work under wine for full Linux support under [Grapejuice](https://gitlab.com/brinkervii/grapejuice)
+| Windows Support      | Will be fixed by fetching latest ROBLOX version, checking if that version exists on your PC and if not, prompts you to install it <br> Will work under wine for full Linux support under [Grapejuice](https://gitlab.com/brinkervii/grapejuice)|
 | Paragraph   | Text        |
