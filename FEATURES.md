@@ -22,5 +22,5 @@ And much more!
 
 # IMPORTANT NOTES
 
-- As I'm developing on MacOS, my priorities will almost always be on this version, so expect MacOS to have the most support.
+- As I'm developing on MacOS, my priorities will almost always be on this version, so expect MacOS to have the best support.
 - Native Linux binary is my lowest priority, due to the Windows version working on wine.
