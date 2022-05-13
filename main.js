@@ -19,7 +19,7 @@ function oldCursorMacOS() {
     }
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
     });
     console.log("Backed up default cursor to: " + newPath);
     var backupDirectory = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/';
@@ -30,21 +30,21 @@ function oldCursorMacOS() {
     }
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
     });
     console.log("Backed up default cursor to: " + newPath);
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowCursor.png';
     var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowFarCursor.png';
     var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
 }
@@ -58,28 +58,28 @@ function revertDefaultCursorMacOS() {
     }
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
     var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/ArrowFarCursor.png';
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
     var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
     var newPath = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
-            throw err;
+            console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldPath + ' to ' + newPath);
     });
 }
