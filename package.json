@@ -1,0 +1,9 @@
+{
+  "name": "roblox_postupdate_oldcursor",
+  "version": "1.0.0",
+  "description": "When roblox updates, run this and it will deactivate the new cursor and reactivate the old cursor",
+  "main": "main.js",
+  "repository": "https://github.com/Thyssenkrupp234/Roblox-Cursor-Restore",
+  "author": "Lincoln Muller",
+  "license": "MIT"
+}
