@@ -1,7 +1,7 @@
 import fs from 'fs';
 // if we are not on MacOS, we exit the script
 if (process.platform !== 'darwin') {
-  console.log('This script is only supported on MacOS, exiting.');
+  console.log('Currently, this only supports MacOS. Either create a Pull Request or come back later. Exiting script.');
   process.exit();
 }
 
