@@ -29,7 +29,8 @@ And much more!
 - Native Linux binary is my lowest priority, due to the Windows version working on wine.
 
 
-| To be added     | Description |
+| To be added     | Description | Priority
 | ----------- | ----------- |
-| Windows Support      | Will be fixed by fetching latest ROBLOX version, checking if that version exists on your PC and if not, prompts you to install it <br> Will work under wine for full Linux support under [Grapejuice](https://gitlab.com/brinkervii/grapejuice)|
-| Paragraph   | Text        |
+| Windows Support      | Will be fixed by fetching latest ROBLOX version, checking if that version exists on your PC and if not, prompts you to install it <br> Will work under wine for full Linux support under [Grapejuice](https://gitlab.com/brinkervii/grapejuice)| High 
+| Linux support  | ROBLOX doesn't have a native Linux version, but having a Linux compiled binary that checks for the ROBLOX WINEPREFIX, and edits the files will be less of a pain to run | Low
+
