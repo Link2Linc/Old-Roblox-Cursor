@@ -18,7 +18,6 @@
 | Add --revert option      | Revert the change from default > new to new > default<br><br>This will require the tool copying the default cursor images to backup directory, then replacing old files (easy to add)                                                             | High     | no       |
 | Custom Cursors           | Support for custom cursors, probably GUI only, but possible integration with TUI                                                                                                                                                                  | Low      | no       |
 | Auto-update              | Add auto-update so users do not need to check github page all the time                                                                                                                                                                            | Low      | no       |
-And much more!
 
 # IMPORTANT NOTES
 
