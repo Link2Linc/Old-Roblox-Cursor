@@ -8,7 +8,7 @@
   "license": "MIT",
   "bin": "./main.js",
   "scripts": {
-    "compile": "yarn && tsc && pkg . && rm -r -f roblox_postupdate_oldcursor-win.exe && rm -r -f roblox_postupdate_oldcursor-linux",
-    "compile-win": "yarn && tsc && pkg . && del /F /Q roblox_postupdate_oldcursor-win.exe && del /F /Q roblox_postupdate_oldcursor-linux"
+    "compile": "yarn && tsc && pkg -t node17-macos-x64 .",
+    "compile-win": "yarn && tsc && pkg -t node17-macos-x64 ."
   }
 }

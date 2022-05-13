@@ -1,5 +1,4 @@
 node_modules/
-roblox_postupdate_oldcursor-macos
-roblox_postupdate_oldcursor-win.exe
+roblox_postupdate_oldcursor
 yarn.lock
 yarn-error.log*
