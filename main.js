@@ -20,7 +20,6 @@ function oldCursorMacOS() {
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
             throw err;
-        console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     console.log("Backed up default cursor to: " + newPath);
     var backupDirectory = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/';
@@ -32,7 +31,6 @@ function oldCursorMacOS() {
     fs_1.default.rename(oldPath, newPath, function (err) {
         if (err)
             throw err;
-        console.log('Moved ' + oldPath + ' to ' + newPath);
     });
     console.log("Backed up default cursor to: " + newPath);
     var oldPath = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowCursor.png';
