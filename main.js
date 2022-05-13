@@ -4,6 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
+// if we are not on MacOS, we exit the script
+if (process.platform !== 'darwin') {
+    console.log('This script is only supported on MacOS, exiting.');
+    process.exit();
+}
 // if we are on MacOS, we need to run the platform specific commands, using process.platform
 function oldCursorMacOS() {
     var backupDirectory = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/';
@@ -87,8 +92,4 @@ if (process.argv[2] && process.platform === 'darwin' && process.argv[2] === '--r
 else {
     console.log('No arguments passed, defaulting to new cursor');
     oldCursorMacOS();
-}
-if (process.platform !== 'darwin') {
-    console.log('This script is only supported on MacOS, exiting.');
-    process.exit();
 }
