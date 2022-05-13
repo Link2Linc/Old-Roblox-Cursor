@@ -31,5 +31,5 @@ And much more!
 
 | To be added     | Description |
 | ----------- | ----------- |
-| Header      | Title       |
+| Windows Support      | Will be fixed by fetching latest ROBLOX version, checking if that version exists on your PC and if not, prompts you to install it       |
 | Paragraph   | Text        |
