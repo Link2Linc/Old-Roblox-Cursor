@@ -64,10 +64,10 @@ function bringBackOldCursorMac() {
 }
 function revertDefaultCursorMac() {
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
-    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowCursor.png';
+    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
     fs_1.default.copyFileSync(oldCursorDir, newDir);
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
-    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowFarCursor.png';
+    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
     fs_1.default.copyFileSync(oldCursorDir, newDir);
 }
 if (process.argv[2] && process.platform === 'darwin' && process.argv[2] === '--revert') {
