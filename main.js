@@ -30,17 +30,18 @@ function bringBackOldCursorMac() {
     });
     var cursorBackup = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup';
     var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
-    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowCursor.png';
+    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
     if (!fs_1.default.existsSync(cursorBackup)) {
         fs_1.default.mkdirSync(cursorBackup);
     }
+    ;
     fs_1.default.rename(oldDir, newDir, function (err) {
         if (err)
             console.log("Roblox is not installed. Please install Roblox and try again.");
         console.log('Moved ' + oldDir + ' to ' + newDir);
     });
     var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
-    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowFarCursor.png';
+    var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
     fs_1.default.rename(oldDir, newDir, function (err) {
         if (err)
             console.log("Roblox is not installed. Please install Roblox and try again.");
@@ -64,18 +65,10 @@ function bringBackOldCursorMac() {
 function revertDefaultCursorMac() {
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
     var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowCursor.png';
-    fs_1.default.copyFile(oldCursorDir, newDir, function (err) {
-        if (err)
-            console.log("Roblox is not installed. Please install Roblox and try again.");
-        console.log('Copied ' + oldCursorDir + ' to ' + newDir);
-    });
+    fs_1.default.copyFileSync(oldCursorDir, newDir);
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
     var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/ArrowFarCursor.png';
-    fs_1.default.copyFile(oldCursorDir, newDir, function (err) {
-        if (err)
-            console.log("Roblox is not installed. Please install Roblox and try again.");
-        console.log('Copied ' + oldCursorDir + ' to ' + newDir);
-    });
+    fs_1.default.copyFileSync(oldCursorDir, newDir);
 }
 if (process.argv[2] && process.platform === 'darwin' && process.argv[2] === '--revert') {
     revertDefaultCursorMac();
