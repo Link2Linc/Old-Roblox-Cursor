@@ -9,5 +9,8 @@
   "bin": "./main.js",
   "scripts": {
     "compile": "yarn && tsc && pkg -t node17-macos-x64 . && rm -r -f /Applications/Roblox.app"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.33"
   }
 }
