@@ -2,3 +2,7 @@ node_modules/
 roblox_postupdate_oldcursor
 yarn.lock
 yarn-error.log*
+test.ts
+test.js
+test.exe
+test
