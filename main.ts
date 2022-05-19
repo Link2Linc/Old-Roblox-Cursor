@@ -53,6 +53,7 @@ function bringBackOldCursorMac() {
 }
 
 
+
 function revertDefaultCursorMac() {
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
     var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
