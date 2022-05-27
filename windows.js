@@ -78,3 +78,18 @@ function bringBackOldCursorWin() {
     });
     console.log("Successfully completed operation. Please restart your Roblox client.");
 }
+function revertDefaultCursorWin() {
+    var oldCursorDir = robloxDir + latestVersion + "\\Content\\textures\\cursorBackup\\ArrowCursor.png";
+    var newDir = robloxDir + latestVersion + "\\Content\\textures\\ArrowCursor.png";
+    fs_1.default.copyFileSync(oldCursorDir, newDir);
+    var oldCursorDir = robloxDir + latestVersion + "\\Content\\textures\\cursorBackup\\ArrowFarCursor.png";
+    var newDir = robloxDir + latestVersion + "\\Content\\textures\\ArrowFarCursor.png";
+    fs_1.default.copyFileSync(oldCursorDir, newDir);
+}
+if (process.argv[2] && process.platform === 'win32' && process.argv[2] === '--revert') {
+    revertDefaultCursorWin();
+}
+else {
+    console.log('No arguments passed, defaulting to new cursor');
+    bringBackOldCursorWin();
+}
