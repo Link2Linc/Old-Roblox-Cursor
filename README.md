@@ -1,6 +1,6 @@
 # Roblox-Cursor-Restore
 
-When Roblox updates they overwrite everything, including the Roblox cursor pack. I personally like the old cursor, so after every update, run this tool.\
+When Roblox updates they overwrite everything, including the Roblox cursor pack. I personally like the old cursor, so after every update, run this tool.
 
 # FEATURES
 
