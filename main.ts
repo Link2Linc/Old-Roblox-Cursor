@@ -15,6 +15,7 @@ async function bringBackOldCursorMac() {
     if (!fs.existsSync(oldBackupDir)) {
         fs.mkdirSync(oldBackupDir);
     };
+    console.log("Created backup directory #1");
     await delay(2);
     fs.copyFileSync(oldCursorDir, newDir);
     await delay(1);
@@ -30,6 +31,7 @@ async function bringBackOldCursorMac() {
     if (!fs.existsSync(cursorBackup)) {
         fs.mkdirSync(cursorBackup);
     };
+    console.log("Created backup directory #2");
     await delay(2);
     fs.rename(oldDir, newDir, function (err) {
         if (err) throw err

@@ -32,6 +32,7 @@ function bringBackOldCursorMac() {
             fs_1.default.mkdirSync(oldBackupDir);
         }
         ;
+        console.log("Created backup directory #1");
         yield delay(2);
         fs_1.default.copyFileSync(oldCursorDir, newDir);
         yield delay(1);
@@ -48,6 +49,7 @@ function bringBackOldCursorMac() {
             fs_1.default.mkdirSync(cursorBackup);
         }
         ;
+        console.log("Created backup directory #2");
         yield delay(2);
         fs_1.default.rename(oldDir, newDir, function (err) {
             if (err)
