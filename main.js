@@ -54,7 +54,7 @@ function bringBackOldCursorMac() {
         fs_1.default.rename(oldDir, newDir, function (err) {
             if (err)
                 throw err;
-            console.log('Moved ' + oldDir + ' to ' + newDir);
+            console.log('Copied ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
         var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
@@ -63,7 +63,7 @@ function bringBackOldCursorMac() {
         fs_1.default.rename(oldDir, newDir, function (err) {
             if (err)
                 throw err;
-            console.log('Moved ' + oldDir + ' to ' + newDir);
+            console.log('Copied ' + oldDir + ' to ' + newDir);
         });
         yield delay(1);
         var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/ArrowCursor.png';
@@ -82,6 +82,7 @@ function bringBackOldCursorMac() {
             if (err)
                 throw err;
             console.log('Copied ' + oldDir + ' to ' + newDir);
+            console.log("Successfully completed operation. Please restart your Roblox client.");
         });
     });
 }
@@ -92,8 +93,9 @@ function revertDefaultCursorMac() {
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
     var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
     fs_1.default.copyFileSync(oldCursorDir, newDir);
+    console.log("Successfully completed operation. Please restart your Roblox client.");
 }
-if (process.argv[2] && process.platform === 'darwin' && process.argv[2] === '--revert') {
+if (process.platform === 'darwin' && process.argv[2] === '--revert') {
     revertDefaultCursorMac();
 }
 else {
