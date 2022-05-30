@@ -23,17 +23,23 @@ function delay(time) {
     });
 }
 ;
-console.log("Welcome to the Roblox cursor backup script!\n This script will backup your current Roblox cursor and replace it with the old 2021 Roblox cursor.\n\n Please make sure you have a Roblox client closed. \n This script is prefixed at /Applications/Roblox.app, if you are non-admin please run the command with the --noadmin flag.\n\n Press enter to continue. \n\n ---------------------------------------------------------");
-// if user presses enter in the terminal, continue
-process.stdin.on('keypress', function (letter, key) {
-    if (key.name === 'return') {
-        console.log("User pressed enter/return, continuing...");
-    }
-    else {
-        // pause the script until the user presses enter
-        process.stdin.pause();
-    }
-});
+function waitForKey(keyCode) {
+    return new Promise(resolve => {
+        process.stdin.on('data', function (chunk) {
+            if (chunk[0] === keyCode) {
+                resolve();
+                process.stdin.pause();
+            }
+        });
+    });
+}
+function welcomeMessage() {
+    return __awaiter(this, void 0, void 0, function* () {
+        console.log("Welcome to the Roblox cursor backup script!\n This script will backup your current Roblox cursor and replace it with the old 2021 Roblox cursor.\n\n Please make sure you have a Roblox client closed. \n This script is prefixed at /Applications/Roblox.app, if you are non-admin please run the command with the --noadmin flag.\n\n Press enter to continue. \n\n ---------------------------------------------------------");
+        // if user presses enter in the terminal, continue 
+        yield waitForKey(13);
+    });
+}
 function bringBackOldCursorMac() {
     return __awaiter(this, void 0, void 0, function* () {
         var oldBackupDir = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/';
@@ -62,20 +68,12 @@ function bringBackOldCursorMac() {
         ;
         console.log("Created backup directory #2");
         yield delay(2);
-        fs_1.default.rename(oldDir, newDir, function (err) {
-            if (err)
-                throw err;
-            console.log('Copied ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         yield delay(1);
         var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png';
         var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowFarCursor.png';
         yield delay(1);
-        fs_1.default.rename(oldDir, newDir, function (err) {
-            if (err)
-                throw err;
-            console.log('Copied ' + oldDir + ' to ' + newDir);
-        });
+        fs_1.default.copyFileSync(oldDir, newDir);
         yield delay(1);
         var oldDir = '/Applications/Roblox.app/Contents/Resources/content/textures/oldCursorBackup/ArrowCursor.png';
         var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
@@ -97,6 +95,7 @@ function bringBackOldCursorMac() {
         });
     });
 }
+welcomeMessage();
 function revertDefaultCursorMac() {
     var oldCursorDir = '/Applications/Roblox.app/Contents/Resources/content/textures/cursorBackup/ArrowCursor.png';
     var newDir = '/Applications/Roblox.app/Contents/Resources/content/textures/Cursors/KeyboardMouse/ArrowCursor.png';
