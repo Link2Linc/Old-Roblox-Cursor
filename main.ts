@@ -13,7 +13,7 @@ console.log("Welcome to the Roblox cursor backup script!\n This script will back
 process.stdin.on('keypress', function (letter, key) {
     if (key.name === 'return') {
         console.log("User pressed enter/return, continuing...");
-    } else{
+    } else {
         // pause the script until the user presses enter
         process.stdin.pause();
     }
