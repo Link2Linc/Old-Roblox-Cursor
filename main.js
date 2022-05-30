@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 if (process.platform !== 'darwin') {
-    console.log('This script is for macOS only');
+    console.log('This script is for macOS only, run "tsc && node windows.js" for Windows.');
     process.exit(1);
 }
 function delay(time) {
@@ -24,12 +24,14 @@ function delay(time) {
 }
 ;
 function waitForKey(keyCode) {
-    return new Promise(resolve => {
-        process.stdin.on('data', function (chunk) {
-            if (chunk[0] === keyCode) {
-                resolve();
-                process.stdin.pause();
-            }
+    return __awaiter(this, void 0, void 0, function* () {
+        return new Promise(resolve => {
+            process.stdin.on('data', function (chunk) {
+                if (chunk[0] === keyCode) {
+                    resolve();
+                    process.stdin.pause();
+                }
+            });
         });
     });
 }

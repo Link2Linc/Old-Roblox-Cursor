@@ -1,6 +1,6 @@
 import fs, { copyFileSync } from 'fs';
 if (process.platform !== 'darwin') {
-  console.log('This script is for macOS only');
+  console.log('This script is for macOS only, run "tsc && node windows.js" for Windows.');
   process.exit(1);
 }
 
@@ -8,7 +8,7 @@ async function delay(time: number) {
     return new Promise(resolve => setTimeout(resolve, time*1000))
 };
 
-function waitForKey(keyCode: number) {
+async function waitForKey(keyCode: number) {
     return new Promise<void>(resolve => {
         process.stdin.on('data',function (chunk) {
             if (chunk[0] === keyCode) {

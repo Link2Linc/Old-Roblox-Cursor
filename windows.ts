@@ -5,6 +5,24 @@ import fs from 'fs';
 const homedir = os.homedir(); + "/"
 const robloxDir = homedir + "\\AppData\\Local\\Roblox\\Versions" + "\\";
 
+async function waitForKey(keyCode: number) {
+    return new Promise<void>(resolve => {
+        process.stdin.on('data',function (chunk) {
+            if (chunk[0] === keyCode) {
+                resolve();
+                process.stdin.pause();
+            }
+        });
+    });
+}
+
+async function welcomeMessage() {
+    console.log("Welcome to the Roblox cursor backup script!\n This script will backup your current Roblox cursor and replace it with the old 2021 Roblox cursor.\n\n Please make sure you have a Roblox client closed. \n This script is prefixed at /Applications/Roblox.app, if you are non-admin please run the command with the --noadmin flag.\n\n Press enter to continue. \n\n ---------------------------------------------------------");
+    // if user presses enter in the terminal, continue 
+    await waitForKey(13);
+}
+
+
 console.log("Roblox version directory is " + robloxDir);
 
 async function delay(time: number) {
@@ -87,6 +105,8 @@ async function bringBackOldCursorWin(){
     });
     console.log("Successfully completed operation. Please restart your Roblox client.");
 }
+
+welcomeMessage();
 
 function revertDefaultCursorWin(){
     var oldCursorDir = robloxDir + latestVersion + "\\Content\\textures\\cursorBackup\\ArrowCursor.png";
