@@ -1,0 +1,38 @@
+{
+
+    "directories": {
+      "output": "out",
+      "buildResources": "build-res"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ]
+    },
+    "win": {
+      "target": {
+          "target": "nsis",
+          "arch": [
+              "ia32",
+              "x64"
+          ]
+      }
+  },
+  "mac": {
+    "target": {
+        "target": "dmg",
+        "arch": [
+            "x64",
+            "arm64"
+        ]
+    }
+  },
+    "nsis": {
+      "oneClick": "false",
+      "perMachine": "false",
+      "allowToChangeInstallationDirectory": "true"
+    }
+  }
+  
