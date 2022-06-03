@@ -28,3 +28,4 @@ When Roblox updates they overwrite everything, including the Roblox cursor pack.
 
 - As I'm developing on MacOS, my priorities will almost always be on this version, so expect MacOS to have the best support.
 - Native Linux binary is my lowest priority, due to the Windows version working on wine.
+- To see old GUI progress, go [here](https://github.com/Link2Linc/Old-Roblox-Cursor-GUI)
