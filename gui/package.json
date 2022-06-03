@@ -4,6 +4,10 @@
   "version": "1.2.3",
   "description": "Revert to the old ROBLOX cursor - GUI variant",
   "main": "gui/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Link2Linc/Old-Roblox-Cursor"
+  },
   "scripts": {
     "start": "tsc && electron .",
     "package": "electron-forge package",
