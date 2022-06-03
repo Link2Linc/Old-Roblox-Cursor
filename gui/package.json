@@ -1,7 +1,7 @@
 {
   "name": "old-roblox-cursor-gui",
   "productName": "Old Roblox Cursor (GUI)",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Revert to the old ROBLOX cursor - GUI variant",
   "main": "gui/index.js",
   "repository": {
