@@ -4,13 +4,6 @@
       "output": "out",
       "buildResources": "build-res"
     },
-    "linux": {
-      "target": [
-        "deb",
-        "rpm",
-        "AppImage"
-      ]
-    },
     "win": {
       "target": {
           "target": "nsis",
