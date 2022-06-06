@@ -1,7 +1,7 @@
 {
   "name": "old-roblox-cursor-tui",
   "productName": "Old Roblox Cursor (TUI variant)",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "When roblox updates, run this and it will deactivate the new cursor and reactivate the old cursor",
   "main": "main.js",
   "repository": "https://github.com/Thyssenkrupp234/Roblox-Cursor-Restore",
