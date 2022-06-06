@@ -11,6 +11,7 @@ When Roblox updates they overwrite everything, including the Roblox cursor pack.
 - Node.JS binary or electron app precompiled for supported platforms
 - Completely FREE
 - Handy automated tool, doesn't require a manual process
+- User friendly experience
 
 
 # TO BE ADDED
@@ -23,6 +24,7 @@ When Roblox updates they overwrite everything, including the Roblox cursor pack.
 | Add --revert option      | Revert the change from default > new to new > default<br><br>This will require the tool copying the default cursor images to backup directory, then replacing old files (easy to add)                                                             | High     | yes       |
 | Custom Cursors           | Support for custom cursors, probably GUI only, but possible integration with TUI                                                                                                                                                                  | Low      | no       |
 | Auto-update              | Add auto-update so users do not need to check github page all the time                                                                                                                                                                            | Low      | no       |
+| Roblox studio support           | add support for roblox studio cursor changing.                                                                                                                                                                  | High      | no       |
 
 # IMPORTANT NOTES
 
