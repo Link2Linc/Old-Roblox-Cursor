@@ -11,17 +11,26 @@
     <script src="../node_modules/xterm/lib/xterm.js"></script>
     <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
     <script>
+const fetch = require('node-fetch');
 
-        async function getCurrentVersion(){
-            let response = await fetch('https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest');
-            return response;
-
-        }
-
-const currentVersion = await getCurrentVersion();
 const package_json = require('../package.json');
 const appVersion = package_json.version;
-alert('Local app version is ' + appVersion + '\nCurrent latest version is ' + currentVersion);
+
+async function my_async_fn(url) {
+  let response = await fetch(url);
+  let text = await response.text();
+  alert('Latest version is ' + text + 'Current app version is ' + appVersion + '.'); // Logs the response text
+  if (text > appVersion) {
+    alert('Your app is outdated. Please update. Go to https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest and download the correct installer.');
+  } else if (text == appVersion) {
+    alert('Your app is up to date.');
+  }
+  return text;
+}
+
+const something = my_async_fn('https://raw.githubusercontent.com/Link2Linc/Old-Roblox-Cursor/master/version');
+
+console.log(something);
     </script>
     
 </head>

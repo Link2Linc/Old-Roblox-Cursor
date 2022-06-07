@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const fetch = require('electron-fetch');
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 
 const createWindow = () => {
