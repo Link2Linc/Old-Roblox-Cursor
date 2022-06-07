@@ -11,11 +11,17 @@
     <script src="../node_modules/xterm/lib/xterm.js"></script>
     <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
     <script>
-const package_json = require('../package.json');
 
+        async function getCurrentVersion(){
+            let response = await fetch('https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest');
+            return response;
+
+        }
+
+const currentVersion = await getCurrentVersion();
+const package_json = require('../package.json');
 const appVersion = package_json.version;
-const currentVerison = fetch('https://raw.githubusercontent.com/Link2Linc/Old-Roblox-Cursor/master/version')
-alert('Local app version is ' + appVersion + '\nCurrent latest version is ' + currentVerison);
+alert('Local app version is ' + appVersion + '\nCurrent latest version is ' + currentVersion);
     </script>
     
 </head>
