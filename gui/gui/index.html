@@ -22,9 +22,11 @@ async function my_async_fn(url) {
   let text = await response.text();
   alert('Latest version is ' + text + '\n' + 'Current app version is ' + appVersion + '.'); // Logs the response text
   if (text > appVersion) {
-    alert('Your app is outdated. Please update. Go to https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest and download the correct installer.');
-  } else if (text == appVersion) {
+    alert('For some reason, your local app is a newer version than the remote latest version. U reverse engineering my app?');
+  } else if (text === appVersion) {
     alert('Your app is up to date.');
+  } else if (text < appVersion) {
+    alert('Your app is outdated. Please update. Go to https://github.com/Link2Linc/Old-Roblox-Cursor/releases/latest and download the correct installer.');
   }
   return text;
 }
