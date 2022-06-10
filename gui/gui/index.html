@@ -11,11 +11,11 @@
     <script src="../node_modules/xterm/lib/xterm.js"></script>
     <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
     <script>
-const fs = require('fs')
+const fs = require('fs');
 const fetch = require('node-fetch');
 
-const package_json = require('../package.json');
-const appVersion = package_json.version;
+
+const appVersion = fs.readFileSync('../version', 'utf8');
 
 async function my_async_fn(url) {
   let response = await fetch(url);
