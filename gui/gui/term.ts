@@ -5,7 +5,7 @@ const termdiv = document.getElementById('terminal');
 
 const startbtn = document.getElementById('start-button');
 const revertbtn = document.getElementById('revert-button');
-var term = new Terminal();
+const term = new Terminal();
 term.open(termdiv);
 term.write('When you click start, the output will be shown here.\r\n');
 
