@@ -1,6 +1,8 @@
 # Roblox-Cursor-Restore (Old-Roblox-Cursor)
 
-When Roblox updates they overwrite everything, including the Roblox cursor pack. I personally like the old cursor, so after every update, run this tool.
+When Roblox updates they overwrite everything, including the Roblox cursor pack. I personally like the old cursor, so after every update, run this tool. Currently, this script works for MacOS and Windows. Linux support is not on the top of our list. Development will only start if there is enough public demand. Enjoy!
+
+!THIS PROJECT IS NO LONGER IN DEVELOPMENT!
 
 # FEATURES
 
@@ -28,6 +30,6 @@ When Roblox updates they overwrite everything, including the Roblox cursor pack.
 
 # IMPORTANT NOTES
 
-- As I'm developing on MacOS, my priorities will almost always be on this version, so expect MacOS to have the best support.
-- Native Linux binary is my lowest priority, due to the Windows version working on wine.
+- As we are developing on MacOS, all priorities will almost always be on this version, so expect MacOS to have the best support.
+- Native Linux binary is are lowest priority, due to the Windows version working on wine.
 - To see old GUI progress, go [here](https://github.com/Link2Linc/Old-Roblox-Cursor-GUI)
